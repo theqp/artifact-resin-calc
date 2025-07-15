@@ -47,7 +47,7 @@ export function scoreTbp(
       scoreToBeat
     );
     const pSubUpgrade =
-      0.8 * threeLinerPSubUpgrade + 0.2 * fourLinerPSubUpgrade;
+      0.75 * threeLinerPSubUpgrade + 0.25 * fourLinerPSubUpgrade;
 
     totalPSub += pSubInitial * pSubUpgrade;
   }
