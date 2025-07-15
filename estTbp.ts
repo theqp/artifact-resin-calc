@@ -227,14 +227,3 @@ export function* combinations<T>(l: Array<T>, k: number): Generator<Array<T>> {
   for (const [i, x] of l.entries())
     for (const set of combinations(l.slice(i + 1), k - 1)) yield [x, ...set];
 }
-
-// modified myself from combinations()
-export function* combinationsWithReplacement<T>(
-  l: Array<T>,
-  k: number
-): Generator<Array<T>> {
-  if (k < 1) return yield [];
-  for (const [i, x] of l.entries())
-    for (const set of combinationsWithReplacement(l.slice(i), k - 1))
-      yield [x, ...set];
-}
