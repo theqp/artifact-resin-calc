@@ -57,7 +57,7 @@ export function scoreTbp(
   const estCount = 1 / totalP;
   // 1.065 per domain run
   // https://genshin-impact.fandom.com/wiki/Loot_System/Artifact_Drop_Distribution#Domains
-  const tbpPerRelic = 40 / 2.13;
+  const tbpPerRelic = 20 / 1.065;
   const estTbp = estCount * tbpPerRelic;
   const days = estTbp / 180;
 
