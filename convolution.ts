@@ -53,7 +53,7 @@ function calculateRollQualityDistribution(substatWeights: number[], numUpgrades:
   // the chance of a single roll into a substat having a specific roll quality is uniform on the values [8, 9, 10]
   // same here, we add a factor of 10 to achieve whole numbers
   const rollQualityRoundingFactor = 10
-  const rollQuality: Distribution = uniformDistribution([0.8, 0.9, 1.0].map((q) => q * rollQualityRoundingFactor))
+  const rollQuality: Distribution = uniformDistribution([0.7, 0.8, 0.9, 1.0].map((q) => q * rollQualityRoundingFactor))
 
   // we have 4 substats that must receive one roll each in order to exist
   const initialDist: Distribution = convolveAddIter(roundedSubstatWeights.map((w) => uniformDistribution([...rollQuality.keys()].map((q) => w * q))))
