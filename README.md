@@ -4,7 +4,7 @@ Implementation of [Estimated TBP](https://github.com/fribbels/hsr-optimizer/blob
 Kudos to hsr-optimizer team, I just brainlessly ported it to Genshin.
 
 Assumptions:
-- 240 Trailblaze Power per day
+- 180 Resin per day
 - 1.065 relic drops per run
 - 20% four line drops, 80% three line drops
 - 20% correct part for relic sets
