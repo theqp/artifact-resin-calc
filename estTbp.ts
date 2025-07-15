@@ -38,6 +38,7 @@ export function scoreTbp(
       .sort((a, b) => a - b);
 
     // 80% vs 20% to get a 3 liner vs a 4 liner
+    // https://keqingmains.com/misc/artifacts/#Substats
     const threeLinerPSubUpgrade = thresholdProbability(
       getRollQualityDistribution(statWeights, 4),
       scoreToBeat
@@ -47,7 +48,7 @@ export function scoreTbp(
       scoreToBeat
     );
     const pSubUpgrade =
-      0.75 * threeLinerPSubUpgrade + 0.25 * fourLinerPSubUpgrade;
+      0.8 * threeLinerPSubUpgrade + 0.2 * fourLinerPSubUpgrade;
 
     totalPSub += pSubInitial * pSubUpgrade;
   }
