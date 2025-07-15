@@ -92,6 +92,7 @@ export function initialSubstatGenerator(
   );
 }
 
+// https://keqingmains.com/misc/artifacts/#Main_Stats
 export function probabilityOfCorrectStat(part: Part, stat: MainStat): number {
   switch (part) {
     case "flower":
@@ -159,7 +160,7 @@ export function probabilityOfCorrectSlot(): number {
   return 0.2;
 }
 
-// source: https://docs.qq.com/sheet/DYkFxSVFNSGp5YlVv?tab=metuhj
+// source: https://genshin-impact.fandom.com/wiki/Artifact/Distribution#Minor_Affix_Attribute
 export function substatLineWeight(sub: SubStat | MainStat): number {
   switch (sub) {
     case "hp":
