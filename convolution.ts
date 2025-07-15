@@ -50,7 +50,7 @@ function calculateRollQualityDistribution(substatWeights: number[], numUpgrades:
   // we take the substat weights and round them to a whole number during the calculation, then divide the resulting keys again at the end
   const roundedSubstatWeights = substatWeights.map((w) => Math.floor(w * substatWeightRoundingFactor))
 
-  // the chance of a single roll into a substat having a specific roll quality is uniform on the values [8, 9, 10]
+  // the chance of a single roll into a substat having a specific roll quality is uniform on the values [7, 8, 9, 10]
   // same here, we add a factor of 10 to achieve whole numbers
   const rollQualityRoundingFactor = 10
   const rollQuality: Distribution = uniformDistribution([0.7, 0.8, 0.9, 1.0].map((q) => q * rollQualityRoundingFactor))
